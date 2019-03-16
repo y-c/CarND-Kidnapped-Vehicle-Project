@@ -160,7 +160,7 @@
       for (int i = 0; i < num_particles; i++) {
           newParticles.push_back(particles[weights_dis(generator)]);
       }
-      particles = newParticles;
+      particles = newParticles; // consider using move to avoid deep copy
   }
 
   void ParticleFilter::SetAssociations(Particle& particle, 
